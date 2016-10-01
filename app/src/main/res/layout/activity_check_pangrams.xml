@@ -11,7 +11,28 @@
         tools:context="com.example.nirav.pangrams_v1.CheckPangramsActivity">
 
     <TextView
-            android:text="Hello World!"
+            android:text="First App Built!"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:id="@+id/displayText"/>
+
+    <TextView
+            android:text="Input Sentence here..."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/displayText"
+            android:id="@+id/askIn1"/>
+    <EditText
+            android:id="@+id/ui1"
+            android:layout_width="match_parent"
+            android:layout_height="300px"
+            android:layout_below="@id/askIn1"/>
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/run_pangrams"
+            android:layout_below="@id/ui1"
+            android:id="@+id/ClickHere"/>
+
+
 </RelativeLayout>

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Pangrams_v1</string>
+    <string name="action_file">File</string>
+    <string name="action_help">Help</string>
+    <string name="run_pangrams">Execute Pangram Check</string>
+    <string name="action_settings">Settings</string>
 </resources>

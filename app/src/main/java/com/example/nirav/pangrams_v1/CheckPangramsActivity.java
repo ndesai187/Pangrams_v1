@@ -14,4 +14,6 @@ public class CheckPangramsActivity extends AppCompatActivity {
         pg.userInput();
         Toast.makeText(this, "hijo de puta", Toast.LENGTH_LONG).show();
     }
+
+    //dummy for commit
 }

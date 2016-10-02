@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class CheckPangramsActivity extends AppCompatActivity {
@@ -16,10 +17,17 @@ public class CheckPangramsActivity extends AppCompatActivity {
         setContentView( R.layout.activity_check_pangrams );
 
         final Button b1 = (Button) findViewById(R.id.ClickHere );
+        final EditText ed1 = (EditText) findViewById( R.id.ui1 );
         b1.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText( CheckPangramsActivity.this, "hijo de puta", Toast.LENGTH_LONG ).show();
+                //Toast.makeText( CheckPangramsActivity.this, "hijo de puta", Toast.LENGTH_LONG ).show();
+                String user_input1 = null;
+                user_input1 = ed1.getText().toString();
+                Toast.makeText( CheckPangramsActivity.this, "You typed : " + user_input1, Toast.LENGTH_LONG ).show();
+
+
+
             }
         } );
 

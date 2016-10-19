@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.concurrent.ExecutionException;
+
 public class CheckPangramsActivity extends AppCompatActivity {
 
     @Override
@@ -26,10 +28,9 @@ public class CheckPangramsActivity extends AppCompatActivity {
                 user_input1 = ed1.getText().toString();
                 Toast.makeText( CheckPangramsActivity.this, "You typed : " + user_input1, Toast.LENGTH_LONG ).show();
 
-
-
             }
         } );
+
 
     /*Pangrams pg = new Pangrams();
         pg.userInput();
@@ -37,6 +38,19 @@ public class CheckPangramsActivity extends AppCompatActivity {
 
 
 }
+
+    public void checkDBConn(View view){
+        /*String s = null;
+        try {
+            s = new DBConnCheckActivity().get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+        Toast.makeText( CheckPangramsActivity.this, s, Toast.LENGTH_LONG ).show();*/
+        new DBConnCheckActivity().execute(  );
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

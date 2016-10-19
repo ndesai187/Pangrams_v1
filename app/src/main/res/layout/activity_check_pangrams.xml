@@ -12,14 +12,20 @@
 
     <TextView
             android:text="First App Built!"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="#2590ff"
+            android:textSize="20sp"
             android:id="@+id/displayText"/>
 
     <TextView
-            android:text="Input Sentence here..."
-            android:layout_width="wrap_content"
+            android:text="Input Sentence below"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="#0c9c7c"
+            android:textSize="20sp"
             android:layout_below="@id/displayText"
             android:id="@+id/askIn1"/>
     <EditText
@@ -27,6 +33,10 @@
             android:layout_width="match_parent"
             android:layout_height="300px"
             android:layout_below="@id/askIn1"/>
+
+    <!--Below button has different implementation
+        a. The button layout is here
+        b. The controls are in main java class to execute on click-->
     <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -34,5 +44,14 @@
             android:layout_below="@id/ui1"
             android:id="@+id/ClickHere"/>
 
-
+    <!--Below button has different implementation
+        a. The button layout contains 'onClick' information
+        b. onClick tag will take care of calling correct method from main java class automatically-->
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Check Web-DB connection"
+            android:layout_below="@id/ClickHere"
+            android:onClick="checkDBConn"
+            android:id="@+id/dbcheck"/>
 </RelativeLayout>
